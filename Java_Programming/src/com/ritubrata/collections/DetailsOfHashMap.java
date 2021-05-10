@@ -27,6 +27,8 @@ public class DetailsOfHashMap {
 		map.put(1, 150);
 		map.put(null, 300);
 		map.put(7, null);
+		map.putIfAbsent(5, 65); // key 5 is already present so it will not be inserted
+		map.putIfAbsent(8, null);
 		System.out.println(map);
 	}
 
