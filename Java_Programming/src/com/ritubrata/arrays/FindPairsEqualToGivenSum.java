@@ -2,7 +2,7 @@ package com.ritubrata.arrays;
 
 import java.util.Arrays;
 
-public class FindPairsEqualToSum {
+public class FindPairsEqualToGivenSum {
 	static void findThePairs(final int inputArray[], final int inputNumber){
 		System.out.println("Input Array : "+Arrays.toString(inputArray));
 		System.out.println("Input Number : "+inputNumber);

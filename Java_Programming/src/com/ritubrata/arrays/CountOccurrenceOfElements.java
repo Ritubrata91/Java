@@ -3,7 +3,7 @@ package com.ritubrata.arrays;
 import java.util.Arrays;
 import java.util.HashMap;
 
-public class CountElementsOccurrence {
+public class CountOccurrenceOfElements {
 	static void arrayElementCount(final int inputArray[]){
 		final HashMap<Integer, Integer> elementCountMap = new HashMap<Integer, Integer>();
 		for (final int i : inputArray){
