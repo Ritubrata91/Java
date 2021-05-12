@@ -12,7 +12,8 @@ public class HashSetVsTreeSet {
 		hset.add("contribute");
 		hset.add("geeks");
 		hset.add(null);
-		System.out.println("HashSet unordered and contains null");
+		hset.add(null);
+		System.out.println("HashSet unordered and contains single null");
 		System.out.println("HashSet contains: ");
 		for (final String temp : hset) {
 			System.out.println(temp);
