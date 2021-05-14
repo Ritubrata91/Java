@@ -1,4 +1,4 @@
-package com.ritubrata.comparison;
+package com.ritubrata.comparator_comparable;
 
 import java.util.ArrayList;
 import java.util.Collections;
