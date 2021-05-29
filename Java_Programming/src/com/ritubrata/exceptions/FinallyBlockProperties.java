@@ -32,6 +32,8 @@ public class FinallyBlockProperties {
 			i =4;
 			return i;
 		}
+		//return i; //if no return statement in finally but in catch then this line will return 3.
+		//if neither return statement in catch nor in finally then this line will return 4.
 
 	}
 
