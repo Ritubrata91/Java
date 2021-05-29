@@ -3,7 +3,8 @@ package com.ritubrata.GenericsAndVarargs;
 
 /**
  *
- * @author bethan
+ * @author Ritubrata Chatterjee
+ *
  */
 public class Varargs {
 

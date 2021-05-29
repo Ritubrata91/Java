@@ -6,7 +6,8 @@ import java.util.List;
 
 /**
  *
- * @author bethan
+ * @author Ritubrata Chatterjee
+ *
  */
 public class GenericMethods {
 
@@ -16,14 +17,14 @@ public class GenericMethods {
 
 	public static <T> List<T> arrayToList(final T[] array, final List<T> list) {
 		Collections.addAll(list, array);
+		System.out.println(list);
 		return list;
 	}
 
 	public static void main(final String[] args) {
 		arrayToList(charArray, new ArrayList<>());
 		arrayToList(boolArray, new ArrayList<>());
-		final List<Integer> intList = arrayToList(intArray, new ArrayList<>());
-		System.out.println(intList.get(0));
+		arrayToList(intArray, new ArrayList<>());
 	}
 
 }
