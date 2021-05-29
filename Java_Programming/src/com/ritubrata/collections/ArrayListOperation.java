@@ -10,6 +10,8 @@ public class ArrayListOperation {
 			list.add(0);
 			list.add(0);
 			list.add(1);
+			list.add(null);
+			list.add(-1);
 		}
 		System.out.println(list.size());
 	}
