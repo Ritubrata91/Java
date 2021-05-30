@@ -19,8 +19,6 @@ public class Lambdas_Formation_Gradually {
 				return b.compareTo(a);
 			}
 		});
-		//first iteration with lambda
-		Collections.sort(names, (final String a, final String b) -> b.compareTo(a));
 		//now remove the return statement
 		Collections.sort(names, (final String a, final String b) -> b.compareTo(a));
 

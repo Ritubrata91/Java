@@ -3,8 +3,10 @@ package com.ritubrata.java8.lambdas;
 import static java.util.Arrays.asList;
 import static java.util.stream.Collectors.toList;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -15,12 +17,13 @@ import java.util.stream.Stream;
 public class Lambdas_Related_To_Stream {
 
 
-	private static List<Book> useOfSummingInt(final Book book1, final Book book2, final Book book3) {
-		final List<Book> books = Arrays.asList(book1, book2, book3);
-		final int total = books.stream()
+	private static List<Book> useOfSummingInt(final Book... books) {
+		final List<Book> bookList = new ArrayList<>();
+		Collections.addAll(bookList, books);
+		final int total = bookList.stream()
 				.collect(Collectors.summingInt(Book::getPages));
 		System.out.println(total);
-		return books;
+		return bookList;
 	}
 
 	private static void removeDuplicates(final Book book1, final Book book2, final Book book3) {

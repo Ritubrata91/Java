@@ -16,6 +16,12 @@ public class Lambdas_Predicate_Consumer_Supplier {
 		final Consumer<String> consumerStr = s -> System.out.println(s.toLowerCase());
 		consumerStr.accept("ABCDefghijklmnopQRSTuvWxyZ");
 
+		//example of the Consumer functional interface
+		final Consumer<String> hello = name -> System.out.println("Hello, " + name);
+		for (final String name : Arrays.asList("Duke", "Mickey", "Minnie")) {
+			hello.accept(name);
+		}
+
 		//example of a lambda made from an instance method
 		final Consumer<String> print = System.out::println;
 		print.accept("Coming to you directly from a lambda...");
@@ -25,10 +31,6 @@ public class Lambdas_Predicate_Consumer_Supplier {
 		final Supplier<String> s  = ()-> "Java is fun";
 		System.out.println(s.get());
 
-		//example of the Consumer functional interface
-		final Consumer<String> hello = name -> System.out.println("Hello, " + name);
-		for (final String name : Arrays.asList("Duke", "Mickey", "Minnie")) {
-			hello.accept(name);
-		}
+
 	}
 }
