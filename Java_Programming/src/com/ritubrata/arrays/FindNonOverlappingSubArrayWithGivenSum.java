@@ -2,7 +2,7 @@ package com.ritubrata.arrays;
 
 import java.util.HashMap;
 
-class FindSubArrayWithGivenSum {
+class FindNonOverlappingSubArrayWithGivenSum {
 	public static int solution(final int[] A, final int target) {
 		int ans = 0;
 		int availIdx = -1;
