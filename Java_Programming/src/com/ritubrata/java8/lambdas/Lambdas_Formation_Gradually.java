@@ -24,6 +24,7 @@ public class Lambdas_Formation_Gradually {
 
 		//now remove the data types and allow the compile to infer the type
 		Collections.sort(names, (a, b) -> b.compareTo(a));
+		System.out.println(names);
 	}
 
 }
