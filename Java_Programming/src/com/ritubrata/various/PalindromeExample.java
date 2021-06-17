@@ -2,24 +2,38 @@ package com.ritubrata.various;
 
 public class PalindromeExample {
 
-	public static void findPalindromeNumber(int number) {
+	public static void findPalindromeNumber(int num) {
 		int r,sum=0,temp;
-		temp=number;
-		while(number>0){
-			r=number%10;
-			sum=sum*10+r;
-			number=number/10;
-		}
-		if(temp==sum) {
-			System.out.println("palindrome number ");
-		} else {
-			System.out.println("not palindrome");
+		temp=num;
+		if(num<=0){
+			System.out.println("no");
+		}else{
+			while(num>0){
+				r = num%10;
+				sum = sum*10 + r ;
+				num = num/10;
+			}
+
+			if(temp == sum){
+				System.out.println("yes");
+			}else{
+				System.out.println("no");
+			}
 		}
 
 	}
 	public static void main(final String args[]){
-		findPalindromeNumber(45454);
-		findPalindromeNumber(123);
+		try {
+			findPalindromeNumber(45454);
+			findPalindromeNumber(123);
+			findPalindromeNumber(-123);
+			findPalindromeNumber(Integer.parseInt("abc"));
+		}catch(final NumberFormatException e) {
+			throw new NumberFormatException("Entered String is not Number");
+		}
+
+
+
 	}
 
 }
