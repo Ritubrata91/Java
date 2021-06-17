@@ -1,6 +1,6 @@
 package com.ritubrata.inheritance;
 
-public class MyExample implements DefaultAndStaticMethodInterface {
+public class InterfaceImplementedClass implements DefaultAndStaticMethodInterface {
 
 	@Override
 	public void abstractMethod(final String str) {
@@ -17,10 +17,10 @@ public class MyExample implements DefaultAndStaticMethodInterface {
 	}
 
 	public static void main(final String[] args) {
-		final MyExample obj = new MyExample();
+		final InterfaceImplementedClass obj = new InterfaceImplementedClass();
 		obj.abstractMethod("abc");
 		obj.defaultMethod();
-		MyExample.staticMethod();
+		InterfaceImplementedClass.staticMethod();
 		DefaultAndStaticMethodInterface.staticMethod();
 	}
 }
