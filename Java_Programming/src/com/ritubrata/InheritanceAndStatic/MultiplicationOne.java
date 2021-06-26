@@ -1,4 +1,4 @@
-package com.ritubrata.inheritance;
+package com.ritubrata.InheritanceAndStatic;
 
 public interface MultiplicationOne {
 	default void result() {

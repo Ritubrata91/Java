@@ -1,4 +1,4 @@
-package com.ritubrata.inheritance;
+package com.ritubrata.InheritanceAndStatic;
 
 public class MultiplicationClass implements MultiplicationOne, MultiplicationTwo {
 
