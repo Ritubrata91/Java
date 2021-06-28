@@ -9,11 +9,11 @@ public class InterfaceImplementedClass implements DefaultAndStaticMethodInterfac
 
 	@Override
 	public void defaultMethod() {
-		System.out.println("Default method overridden in child class");
+		System.out.println("Default method overridden in child class.");
 	}
 
 	static void staticMethod() {
-		System.out.println("Static method overridden in Class");
+		System.out.println("Static method overridden in child class.");
 	}
 
 	public static void main(final String[] args) {
