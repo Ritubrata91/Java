@@ -11,7 +11,7 @@ public class TreeMapVsTreeSet {
 		treeSet.add("FOR");
 		treeSet.add("geeks");
 		treeSet.add("tutorial");
-		// treeSet.add(null);
+		//treeSet.add(null);     NullPointerException
 		System.out.println("Treeset Sorted by object value."
 				+ " Treeset does not allow duplicates . Treeset does not allow Null");
 		System.out.println(treeSet);
@@ -28,7 +28,7 @@ public class TreeMapVsTreeSet {
 		treeMap.put(4, "tutorial");
 		treeMap.put(4, "null");
 		treeMap.put(14, "null");
-		//treeMap.put(null, "abc");
+		//treeMap.put(null, "abc");     NullPointerException
 		System.out.println("Treemap Sorted by key. "
 				+ " Treemap overrirdes value of duplicates key. "
 				+ "Treemap allow duplicate value of different keys. "
