@@ -2,8 +2,9 @@ package com.ritubrata.collections;
 
 public class KeyObject {
 
-	public KeyObject(final int id) {
+	public KeyObject(final int id, final String name) {
 		this.id = id;
+		this.name = name;
 	}
 
 	public int getId() {
@@ -19,7 +20,6 @@ public class KeyObject {
 		this.name = name;
 	}
 
-	//Depends only on id
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -28,21 +28,18 @@ public class KeyObject {
 		return result;
 	}
 
-	//Compare only id
-	@Override
-	public boolean equals(final Object obj) {
-		if (this == obj) {
+
+	@Override public boolean equals(final Object obj) {
+		if (obj == this) {
 			return true;
 		}
-		if (obj == null || getClass() != obj.getClass()) {
+		if (obj == null || !(obj instanceof KeyObject)) {
 			return false;
 		}
-		final KeyObject other = (KeyObject) obj;
-		if (id != other.id) {
-			return false;
-		}
-		return true;
+		final KeyObject object = (KeyObject) obj;
+		return object.getId() == this.getId() && object.getName() == this.getName();
 	}
+
 
 	int id;
 	String name;
