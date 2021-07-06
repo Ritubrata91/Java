@@ -4,14 +4,15 @@ public class Book {
 	private String authorFName;
 	private String authorLName;
 	private int pages;
+	private String category;
 
 	public Book(final String title, final String authorFName, final String authorLName,
-			final int pages) {
+			final int pages, final String category) {
 		this.title = title;
 		this.authorFName = authorFName;
 		this.authorLName = authorLName;
 		this.pages = pages;
-
+		this.category = category;
 	}
 
 	public String getTitle() {
@@ -44,6 +45,14 @@ public class Book {
 
 	public void setPages(final int pages) {
 		this.pages = pages;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(final String category) {
+		this.category = category;
 	}
 	@Override
 	public String toString()
