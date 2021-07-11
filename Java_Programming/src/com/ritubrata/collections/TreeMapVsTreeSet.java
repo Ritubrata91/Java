@@ -20,8 +20,8 @@ public class TreeMapVsTreeSet {
 				+ "************************************************");
 
 		final TreeMap<Integer, String> treeMap = new TreeMap<>();
-		treeMap.put(1, "geeks");
 		treeMap.put(2, "FOR");
+		treeMap.put(1, "geeks");
 		treeMap.put(3, "geeks");
 		treeMap.put(3, "abc");
 		treeMap.put(10, "geeks");
