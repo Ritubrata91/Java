@@ -1,4 +1,4 @@
-package com.ritubrata.various;
+package com.ritubrata.threads;
 
 public class ThreadSafeSingleton {
 
