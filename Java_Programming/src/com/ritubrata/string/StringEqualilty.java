@@ -7,11 +7,8 @@ public class StringEqualilty {
 		final String s2 = new String("Qualys");
 		final String s3 = "Qualys";
 		final String s4 = new String("Qualys");
-
 		usingDoubleEquals(s1, s2, s3, s4);
 		usingEqualsMethod(s1, s2, s3, s4);
-
-
 	}
 
 	private static void usingEqualsMethod(final String s1, final String s2, final String s3, final String s4) {
