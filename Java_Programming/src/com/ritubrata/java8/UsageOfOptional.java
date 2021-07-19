@@ -1,4 +1,4 @@
-package com.ritubrata.java8.optionalAndflatmap;
+package com.ritubrata.java8;
 
 import java.util.NoSuchElementException;
 import java.util.Optional;

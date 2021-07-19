@@ -1,4 +1,4 @@
-package com.ritubrata.java8.lambdas;
+package com.ritubrata.java8;
 
 import java.util.Arrays;
 import java.util.Collections;

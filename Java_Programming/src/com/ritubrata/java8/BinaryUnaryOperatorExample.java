@@ -1,8 +1,8 @@
-package com.ritubrata.java8.lambdas;
+package com.ritubrata.java8;
 import java.util.function.BinaryOperator;
 import java.util.function.UnaryOperator;
 
-public class Lambdas_Binary_Unary_Operator {
+public class BinaryUnaryOperatorExample {
 
 
 	public static void main(final String[] args) {

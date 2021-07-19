@@ -1,10 +1,10 @@
-package com.ritubrata.java8.lambdas;
+package com.ritubrata.java8;
 import java.util.Arrays;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
-public class Lambdas_Predicate_Consumer_Supplier {
+public class PredicateConsumerSupplierExample {
 
 
 	public static void main(final String[] args) {

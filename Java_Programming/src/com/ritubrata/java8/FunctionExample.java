@@ -1,11 +1,11 @@
-package com.ritubrata.java8.lambdas;
+package com.ritubrata.java8;
 
 import java.math.BigInteger;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.IntFunction;
 
-public class Lambdas_RelatedTo_Function {
+public class FunctionExample {
 
 	/**
 	 * @param args the command line arguments

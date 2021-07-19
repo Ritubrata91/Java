@@ -1,4 +1,4 @@
-package com.ritubrata.java8.lambdas;
+package com.ritubrata.java8;
 public class Book {
 	private String title;
 	private String authorFName;

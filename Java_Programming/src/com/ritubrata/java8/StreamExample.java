@@ -1,4 +1,4 @@
-package com.ritubrata.java8.lambdas;
+package com.ritubrata.java8;
 
 import java.util.Arrays;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Lambdas_Related_To_Stream {
+public class StreamExample {
 
 
 	public static void main(final String[] args) {
@@ -19,6 +19,10 @@ public class Lambdas_Related_To_Stream {
 				"Dr", "Seuss", 45, "Comedy");
 
 		final List<Book> bookList = Arrays.asList(book1, book2, book3);
+
+		bookList.sort((b1,b2)->b1.getPages() - b2.getPages());
+		System.out.println("Books sorted by page number asc order : " );
+		bookList.forEach(System.out::println);
 
 		//use of summingInt
 		final int total = bookList.stream()
@@ -38,6 +42,7 @@ public class Lambdas_Related_To_Stream {
 				.collect(Collectors.groupingBy(Book::getCategory));
 		map.forEach((category,bookListTemp)->System.out.println("Name: "+category+" ==>"+bookListTemp));
 
+
 		//use of sorted
 		Arrays.asList("red", "green", "blue").stream().sorted()
 		.findFirst().ifPresent(System.out::println);
@@ -53,9 +58,6 @@ public class Lambdas_Related_To_Stream {
 		//use of mapToInt and max
 		Stream.of(1.5, 2.3, 3.7).mapToInt(Double::intValue)
 		.max().ifPresent(System.out::println);
-
-
-
 	}
 
 
