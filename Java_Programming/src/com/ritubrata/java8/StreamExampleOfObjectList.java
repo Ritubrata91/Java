@@ -4,9 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-public class StreamExample {
+public class StreamExampleOfObjectList {
 
 
 	public static void main(final String[] args) {
@@ -21,21 +20,23 @@ public class StreamExample {
 		final List<Book> bookList = Arrays.asList(book1, book2, book3);
 
 		bookList.sort((b1,b2)->b1.getPages() - b2.getPages());
-		System.out.println("Books sorted by page number asc order : " );
+		System.out.println("use of sort. Books sorted by page number asc order : " );
 		bookList.forEach(System.out::println);
 
 		//use of summingInt
 		final int total = bookList.stream()
 				.collect(Collectors.summingInt(Book::getPages));
-		System.out.println(total);
+		System.out.println("use of summingInt . Total pages : "  +total);
 
 		//use of count
-		System.out.println("no of books having more than 30 pages : " + bookList.stream()
-		.filter(book -> book.getPages()>30)	.count());
+		System.out.println(" use of count. Number of books having more than 30 pages : " +
+				bookList.stream()
+		.filter(book -> book.getPages()>30)
+		.count());
 
 		//use of findAny
-		System.out.println(bookList.stream()
-				.filter(e->e.getTitle().contains("The")).findAny());
+		System.out.println("use of findAny : " + bookList.stream()
+		.filter(e->e.getTitle().contains("The")).findAny().get());
 
 		//use of groupBy
 		final Map<String, List<Book>> map = bookList.stream()
@@ -43,21 +44,7 @@ public class StreamExample {
 		map.forEach((category,bookListTemp)->System.out.println("Name: "+category+" ==>"+bookListTemp));
 
 
-		//use of sorted
-		Arrays.asList("red", "green", "blue").stream().sorted()
-		.findFirst().ifPresent(System.out::println);
 
-		//example of Stream.of with a filter
-		Stream.of("apple", "pear", "banana", "cherry", "apricot")
-		.filter(fruit -> fruit.startsWith("a")).forEach(fruit -> System.out.println("Starts with a: " + fruit));
-
-		//use of average
-		Arrays.stream(new int[]{1, 2, 3, 4}).map(n -> n * n)
-		.average().ifPresent(System.out::println);
-
-		//use of mapToInt and max
-		Stream.of(1.5, 2.3, 3.7).mapToInt(Double::intValue)
-		.max().ifPresent(System.out::println);
 	}
 
 
