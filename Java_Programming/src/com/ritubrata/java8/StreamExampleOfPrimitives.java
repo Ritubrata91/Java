@@ -1,6 +1,9 @@
 package com.ritubrata.java8;
 
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class StreamExampleOfPrimitives {
@@ -23,6 +26,24 @@ public class StreamExampleOfPrimitives {
 
 		//use of max
 		System.out.println(Stream.of(1,5,2,3,4,7).max(Integer::compare).get());
+
+		System.out.println(IntStream.range(1, 5).reduce(2, (a,b)-> a+b));
+
+		System.out.println(Stream.generate(()-> "DBOI").limit(10).collect(Collectors.toList()));
+
+		System.out.println( IntStream.range(1, 20)
+				.filter(v -> v%4 ==0)
+				.filter(v -> v <10)
+				.max().getAsInt());
+
+		System.out.println(Arrays.asList(Arrays.asList(1,2), Arrays.asList(5,6))
+				.stream()
+				.flatMap(List::stream)
+				.collect(Collectors.toList()));
+
+		System.out.println(!IntStream.rangeClosed(2, -1/2)
+				.anyMatch(i->29%i==0));
+
 	}
 
 }
