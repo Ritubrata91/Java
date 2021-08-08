@@ -2,6 +2,7 @@ package com.ritubrata.java8;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class UsageOfFlatMap {
@@ -11,5 +12,10 @@ public class UsageOfFlatMap {
 		list.stream().flatMap(str ->
 		Stream.of(str.charAt(2))).
 		forEach(System.out::println);
+
+		System.out.println(Arrays.asList(Arrays.asList(1,2), Arrays.asList(5,6))
+				.stream()
+				.flatMap(List::stream)
+				.collect(Collectors.toList()));
 	}
 }
