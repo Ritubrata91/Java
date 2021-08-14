@@ -42,9 +42,6 @@ public class StreamExampleOfObjectList {
 		final Map<String, List<Book>> map = bookList.stream()
 				.collect(Collectors.groupingBy(Book::getCategory));
 		map.forEach((category,bookListTemp)->System.out.println("Name: "+category+" ==>"+bookListTemp));
-
-
-
 	}
 
 

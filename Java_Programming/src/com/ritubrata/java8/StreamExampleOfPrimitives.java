@@ -43,7 +43,6 @@ public class StreamExampleOfPrimitives {
 		System.out.println(isPrime(25));
 
 		System.out.println(isPrime(23));
-
 	}
 
 }
