@@ -1,6 +1,7 @@
 package com.ritubrata.java8;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -43,6 +44,18 @@ public class StreamExampleOfPrimitives {
 		System.out.println(isPrime(25));
 
 		System.out.println(isPrime(23));
+
+		final List<String> stringList = Arrays.asList( "-1" , "2", "3", "4", "5" );
+		final List<Integer> newIntList = stringList.stream()
+				.map(Integer::parseInt)
+				.collect(Collectors.toList());
+		System.out.println(" Convert List<String> to List<Integer> : " + newIntList);
+
+		final List<Integer> intList = Arrays.asList( 1,2,3,4,5 );
+		final List<String> newStringList = intList.stream()
+				.map(String::valueOf)
+				.collect(Collectors.toList());
+		System.out.println(" Convert List<Integer> to List<String> : " + newStringList);
 	}
 
 }
