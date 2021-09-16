@@ -15,6 +15,7 @@ public class ClassWithoutExceptionThrowing {
 			return i;
 		}finally {
 			i =300;
+			//return i; //will return 300 if it is not commented out.
 		}
 	}
 

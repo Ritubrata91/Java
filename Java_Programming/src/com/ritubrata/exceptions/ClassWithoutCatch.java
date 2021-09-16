@@ -4,14 +4,14 @@ public class ClassWithoutCatch {
 
 	public static void main(final String[] args) {
 		try	{
-			System.out.print("A");
+			System.out.println("A");
 			final int num = 99/0;
 			System.out.print("B");
 		}
 		finally{
-			System.out.print("C");
+			System.out.println("C");
 		}
-		System.out.print("D");
+		System.out.println("D");
 	}
 
 }
