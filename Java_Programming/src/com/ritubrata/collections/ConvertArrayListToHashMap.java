@@ -13,9 +13,10 @@ public class ConvertArrayListToHashMap {
 		fruits.add("Pineapple");
 		fruits.add("Apple");
 
-		System.out.println(fruits.stream().collect(Collectors.toSet()));
-		System.out.println("Elements in ArrayList are : "
-				+ fruits);
+		/*
+		 * System.out.println(fruits.stream().collect(Collectors.toList()));
+		 * System.out.println("Elements in ArrayList are : " + fruits);
+		 */
 
 		final HashMap<String, Integer> res = fruits.stream().collect(Collectors.toMap(
 				Function.identity(), String::length,
