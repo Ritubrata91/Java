@@ -46,6 +46,9 @@ public class StreamExampleOfIntegers {
 				intList.stream()
 		.filter(n-> n%2 !=0)
 		.collect(Collectors.summingInt(n->n*n)));
+
+
+		System.out.println(Arrays.asList(5,7,11,15).stream().filter(n->n*n >100).collect(Collectors.toList()));
 	}
 
 }

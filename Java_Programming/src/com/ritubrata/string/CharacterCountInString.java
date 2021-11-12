@@ -1,11 +1,13 @@
 package com.ritubrata.string;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class CharacterCountInString {
-	public static void printOccuranceofEachCharacter(final String s){
+	public static String printOccuranceofEachCharacter(final String s){
 
-		final HashMap<Character, Integer> map = new HashMap<>();
+		final HashMap<Character, Integer> map = new LinkedHashMap<>();
 		int i =0;
 		while(i< s.length()){
 			final Character c = s.charAt(i);
@@ -16,11 +18,17 @@ public class CharacterCountInString {
 			}
 			i++;
 		}
-		System.out.println(map);
+		final StringBuilder sb = new StringBuilder();
+		for(final Map.Entry<Character, Integer> entry : map.entrySet()) {
+			sb.append(entry.getKey()+ " " + String.valueOf(entry.getValue()));
+			sb.append(System.getProperty("line.separator"));
+
+		}
+		return sb.toString();
 	}
 
 	public static void main(final String[] args) {
-		printOccuranceofEachCharacter("ritubrata aa");
+		System.out.println(printOccuranceofEachCharacter("ritubrata aa"));
 	}
 
 }
