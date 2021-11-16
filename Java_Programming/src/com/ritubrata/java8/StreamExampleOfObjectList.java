@@ -47,13 +47,12 @@ public class StreamExampleOfObjectList {
 
 
 		//group books by category and find max pages for each category.
-		final Map<String,Book> bookMap = bookList.stream()
-				.collect(Collectors.toMap(
-						Book::getCategory,
-						b-> b,
-						BinaryOperator.maxBy(Comparator.comparingInt(Book::getPages))
-						));
-		bookMap.forEach((category,book)->System.out.println("Category: "+category+" ==> Pages : " +book.getPages()));
+		bookList.stream()
+		.collect(Collectors.toMap(
+				Book::getCategory,
+				b-> b,
+				BinaryOperator.maxBy(Comparator.comparingInt(Book::getPages))))
+		.forEach((category,book)->System.out.println("Category: "+category+" ==> Pages : " +book.getPages()));
 	}
 
 
