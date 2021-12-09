@@ -30,7 +30,7 @@ public class TreeMapVsTreeSet {
 		treeMap.put(14, "null");
 		//treeMap.put(null, "abc");     NullPointerException
 		System.out.println("Treemap Sorted by key. "
-				+ " Treemap overrirdes value of duplicates key. "
+				+ " Treemap overrirdes value of same key. "
 				+ "Treemap allow duplicate value of different keys. "
 				+ "Treemap allows more than one Null value but no null key. ");
 		System.out.println(treeMap);
