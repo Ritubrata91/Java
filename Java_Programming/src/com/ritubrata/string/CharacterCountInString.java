@@ -20,9 +20,8 @@ public class CharacterCountInString {
 		}
 		final StringBuilder sb = new StringBuilder();
 		for(final Map.Entry<Character, Integer> entry : map.entrySet()) {
-			sb.append(entry.getKey()+ " " + String.valueOf(entry.getValue()));
-			sb.append(System.getProperty("line.separator"));
-
+			sb.append(entry.getKey());
+			sb.append(entry.getValue());
 		}
 		return sb.toString();
 	}
