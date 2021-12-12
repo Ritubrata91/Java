@@ -22,8 +22,8 @@ public class StreamExampleOfIntegers {
 		Stream.of(1.5, 2.3, 3.7).mapToInt(Double::intValue)
 		.max().ifPresent(System.out::println);
 
-		System.out.print("2nd highest number in 1,3,4,2,5 is : ");
-		Stream.of(1,3,4,2,5).sorted(Comparator.reverseOrder()).limit(2).forEach(System.out::println);
+		System.out.println("2nd highest number in 1,3,4,2,5 is : " +
+				Stream.of(1,3,4,2,5).sorted(Comparator.reverseOrder()).limit(2).skip(1).findFirst().get());
 
 		//use of max
 		System.out.println("use of max : " + Stream.of(1,5,2,3,4,7).max(Integer::compare).get());
