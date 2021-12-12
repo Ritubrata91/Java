@@ -7,8 +7,8 @@ public class HashMapUsingObjectAsKey {
 
 	public static void main(final String[] args) {
 		final KeyObject object = new KeyObject(1,"abc");
-		final KeyObject object1 = new KeyObject(2,"def");
-		final KeyObject object2 = new KeyObject(3,"ijk");
+		final KeyObject object1 = new KeyObject(2,"abc");
+		final KeyObject object2 = new KeyObject(3,"abc");
 
 		final Map<KeyObject, Integer> map = new HashMap<>();
 		map.put(object, 0);
