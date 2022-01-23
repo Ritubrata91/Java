@@ -53,6 +53,14 @@ public class StreamExampleOfIntegers {
 
 
 		System.out.println(Arrays.asList(5,7,11,15).stream().filter(n->n*n >100).collect(Collectors.toList()));
+
+		final int number = 5;
+		System.out.println("Factorial of " + number + " is : " +  IntStream.rangeClosed(2, number).reduce(1, (x, y) -> x * y));
+
+		System.out.println("Fibonacci series for first " + number + " elements is : ");
+		Stream.iterate(new long[] { 0, 1 }, p -> new long[] { p[1], p[0] + p[1] })
+		.limit(number)
+		.forEach(p -> System.out.println(p[0]));
 	}
 
 }
