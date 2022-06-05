@@ -11,7 +11,10 @@ public class JavaElevenFeatures {
 
 	public static void main(final String[] args) throws IOException {
 		//fileReadWrite();
+		System.out.println("*********************************************");
 		predicateNotMethod();
+		System.out.println("*********************************************");
+		stringRelatedChanges();
 	}
 
 	private static void fileReadWrite() throws IOException {
@@ -28,4 +31,16 @@ public class JavaElevenFeatures {
 		list.stream().filter(Predicate.not(n->n%2==0)).forEach(System.out::println);
 	}
 
+	private static void stringRelatedChanges(){
+		System.out.println("".isBlank());
+		System.out.println(" ".isBlank());
+		//final String s = null;
+		//System.out.println(s.isBlank()); //NullPointer
+
+		System.out.println(" ritu ".strip()); //both side spaces will be removed, middle spaces remain
+		System.out.println(" ritu ".stripLeading()); // left side space will be removed, middle spaces remain
+		System.out.println(" ritu ".stripTrailing()); // right side space will be removed, middle spaces remain
+
+		"abc\ndef\nghi".lines().forEach(System.out::println);
+	}
 }
