@@ -37,9 +37,9 @@ public class JavaElevenFeatures {
 		//final String s = null;
 		//System.out.println(s.isBlank()); //NullPointer
 
-		System.out.println(" ritu ".strip()); //both side spaces will be removed, middle spaces remain
-		System.out.println(" ritu ".stripLeading()); // left side space will be removed, middle spaces remain
-		System.out.println(" ritu ".stripTrailing()); // right side space will be removed, middle spaces remain
+		System.out.println(" ri tu ".strip()); //both side spaces will be removed, middle spaces remain
+		System.out.println(" ri tu ".stripLeading()); // left side space will be removed, middle spaces remain
+		System.out.println(" ri tu ".stripTrailing()); // right side space will be removed, middle spaces remain
 
 		"abc\ndef\nghi".lines().forEach(System.out::println);
 	}
