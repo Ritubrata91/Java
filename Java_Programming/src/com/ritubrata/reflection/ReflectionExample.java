@@ -22,11 +22,14 @@ public class ReflectionExample {
 		for (final Method method : methods) {
 			System.out.println(method.getName());
 		}
-		final Method methodcall1= cls.getDeclaredMethod("method2", int.class);
-		methodcall1.invoke(obj, 19);
+
 		final Field field = cls.getDeclaredField("s");
 		field.setAccessible(true);
 		field.set(obj, "JAVA");
+
+		//NoSuchMethodException
+		final Method methodcall1= cls.getDeclaredMethod("method2", int.class);
+		methodcall1.invoke(obj, 19);
 		final Method methodcall2= cls.getDeclaredMethod("method1");
 		methodcall2.invoke(obj);
 		final Method methodcall3= cls.getDeclaredMethod("method3");
