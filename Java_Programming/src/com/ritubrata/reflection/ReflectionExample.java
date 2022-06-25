@@ -27,7 +27,6 @@ public class ReflectionExample {
 		field.setAccessible(true);
 		field.set(obj, "JAVA");
 
-		//NoSuchMethodException
 		final Method methodcall1= cls.getDeclaredMethod("method2", int.class);
 		methodcall1.invoke(obj, 19);
 		final Method methodcall2= cls.getDeclaredMethod("method1");
