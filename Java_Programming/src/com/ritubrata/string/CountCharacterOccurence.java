@@ -3,7 +3,13 @@ package com.ritubrata.string;
 public class CountCharacterOccurence {
 	public static void main(final String[] args){
 		final String s = "Java is java again java again";
-		final int count = s.length() - s.replace("a", "").length();
-		System.out.println("Number of occurances of 'a' in "+s+" = "+count);
+		countOccuranceOfChar(s,'a');
 	}
+
+	private static void countOccuranceOfChar(final String str, final char c) {
+		final int count = str.length() - str.replace(Character.toString(c), "").length();
+		System.out.println("Number of occurances of " +c+ " in the string -> "+str+" is "+count);
+	}
+
+
 }

@@ -1,10 +1,8 @@
 package com.ritubrata.string;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 public class CharacterCountInString {
 	public static String countOccofEachCharHashMap(final String s){
@@ -23,22 +21,15 @@ public class CharacterCountInString {
 		final StringBuilder sb = new StringBuilder();
 		for(final Map.Entry<Character, Integer> entry : map.entrySet()) {
 			sb.append(entry.getKey());
+			sb.append("=");
 			sb.append(entry.getValue());
+			sb.append(" ");
 		}
 		return sb.toString();
 	}
 
-	public static Map<String, Long> countOccofEachCharJava8(final String str) {
-		final Map<String, Long> result = Arrays.stream(str.split("")).
-				map(String::toLowerCase).
-				collect(Collectors.groupingBy(s -> s,
-						LinkedHashMap::new, Collectors.counting()));
-		return result;
-	}
-
 	public static void main(final String[] args) {
-		System.out.println(countOccofEachCharHashMap("ritubrata aa"));
-		System.out.println(countOccofEachCharJava8("ritubrata aa"));
+		System.out.println(countOccofEachCharHashMap("ritubrata"));
 	}
 
 }
